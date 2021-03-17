@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.1 )
 
-project( GLFW_CMAKE )
+project( Flappy_Smiley )
 
 include_directories( ${OPENGL_INCLUDE_DIRS} )
 
@@ -23,14 +23,14 @@ include_directories("glm")
 
 file(GLOB third_party third_party_source/*)
      
-add_executable( GLFW_CMAKE ${SRC} ${third_party})
-target_link_libraries( GLFW_CMAKE glfw )
+add_executable( Flappy_Smiley ${SRC} ${third_party})
+target_link_libraries( Flappy_Smiley glfw )
 if( MSVC )
     if(${CMAKE_VERSION} VERSION_LESS "3.6.0") 
         message( "\n\t[ WARNING ]\n\n\tCMake version lower than 3.6.\n\n\t - Please update CMake and rerun; OR\n\t - Manually set 'GLFW-CMake-starter' as StartUp Project in Visual Studio.\n" )
     else()
-        set_property( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT GLFW_CMAKE )
+        set_property( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Flappy_Smiley )
     endif()
 endif()
 
-add_custom_command(TARGET GLFW_CMAKE POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res)
+add_custom_command(TARGET Flappy_Smiley POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res)

@@ -18,7 +18,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow((int)WIDTH, (int)HEIGHT, "LearnOpenGL", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow((int)WIDTH, (int)HEIGHT, "Flappy Smiley", NULL, NULL);
 	if (!window)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
