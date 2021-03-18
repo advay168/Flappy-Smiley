@@ -34,13 +34,13 @@ public:
 private:
 	GameState mode;
 	int score = 0;
-	float& WIDTH;
-	float& HEIGHT;
 	glm::mat4 m_projection;
 	Bird bird;
 	Pipes pipes;
 	DrawRects endDrawer;
 	DrawRects side_blockDrawer;
+	float& WIDTH;
+	float& HEIGHT;
 	DrawRects gridDrawer;
 };
 

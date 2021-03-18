@@ -14,6 +14,7 @@
 
 Game::Game(float& WIDTH, float& HEIGHT) :
 	mode(GameState::Welcome),
+	m_projection(glm::mat4(1.0f)),
 	bird(pixW,pixH,m_projection),
 	pipes(pixW,pixH, 4,m_projection),
 	endDrawer({ 0.3f,1.0f,0.3f , 1.0f }, pixW,pixH,m_projection),
