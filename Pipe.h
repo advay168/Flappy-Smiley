@@ -25,7 +25,6 @@ private:
 	void reset(int i);
 	bool isOffScreen(int i1);
 
-	int n;
 
 	float m_width;
 	std::vector<float> m_gap_heights;
@@ -37,5 +36,7 @@ private:
 
 	unsigned int width;
 	unsigned int height;
+	
+	int n;
 };
 

@@ -32,6 +32,7 @@ public:
 	void scroll_callback(GLFWwindow* /* window */, double /* xoffset */, double /* yoffset */) {}
 	bool reset = false;
 private:
+	GameState mode;
 	int score = 0;
 	float& WIDTH;
 	float& HEIGHT;
@@ -41,6 +42,5 @@ private:
 	DrawRects endDrawer;
 	DrawRects side_blockDrawer;
 	DrawRects gridDrawer;
-	GameState mode;
 };
 

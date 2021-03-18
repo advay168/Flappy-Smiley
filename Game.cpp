@@ -18,8 +18,8 @@ Game::Game(float& WIDTH, float& HEIGHT) :
 	pipes(pixW,pixH, 4,m_projection),
 	endDrawer({ 0.3f,1.0f,0.3f , 1.0f }, pixW,pixH,m_projection),
 	side_blockDrawer({ 0.0f,0.0f,0.0f,1.0f }, pixW,pixH,m_projection),
-	gridDrawer({ 0.3,0.3,1.0,1.0 }, pixW,pixH,m_projection),
-	WIDTH(WIDTH), HEIGHT(HEIGHT)
+	WIDTH(WIDTH), HEIGHT(HEIGHT),
+	gridDrawer({ 0.3,0.3,1.0,1.0 }, pixW,pixH,m_projection)
 {
 	gltInit();
 	glEnable(GL_BLEND);

@@ -3,11 +3,11 @@
 Bird::Bird(unsigned int width, unsigned int height, const glm::mat4& projection) :
 	width(width),
 	height(height),
+	m_drawer("res/textures/awesomeface.png",width,height,projection),
 	radius(5),
 	m_pos(width/4,height/2),
 	m_vel(0),
-	m_acc(0,0.2),
-	m_drawer("res/textures/awesomeface.png",width,height,projection)
+	m_acc(0,0.2)
 {
 	m_drawer.Rectangle(m_pos.x-radius, m_pos.y-radius, 2 * radius, 2 * radius);
 }

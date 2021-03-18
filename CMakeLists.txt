@@ -28,7 +28,7 @@ target_include_directories(Flappy_Smiley SYSTEM PUBLIC "glm")
 if(MSVC)
   target_compile_options(Flappy_Smiley PRIVATE /W4 /wd4244 /wd4201)
 else()
-  target_compile_options(Flappy_Smiley PRIVATE -Wall -Wextra -pedantic)
+  set_source_files_properties(${SRC} PROPERTIES COMPILE_FLAGS "-Wall -Wextra -pedantic")
 endif()
 
 if( MSVC )

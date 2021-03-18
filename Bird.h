@@ -18,11 +18,12 @@ public:
 	int getRadius();
 	bool paused = false;
 private:
-	int radius;
+	void move(glm::vec2 offset);
+	
 	unsigned int width;
 	unsigned int height;
-	void move(glm::vec2 offset);
 	DrawRects m_drawer;
+	int radius;
 	glm::vec2 m_pos;
 	glm::vec2 m_vel;
 	glm::vec2 m_acc;
