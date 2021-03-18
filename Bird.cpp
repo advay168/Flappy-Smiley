@@ -35,13 +35,9 @@ bool Bird::isCollidingWithSide()
 {
 	if (m_pos.y + radius > height) {
 		return true;
-		m_pos.y = height - radius;
-		m_vel = -m_vel;
 	}
 	if (m_pos.y - radius <0) {
 		return true;
-		m_pos.y = height - radius;
-		m_vel = -m_vel;
 	}
 	return false;
 }

@@ -47,15 +47,6 @@ void DrawRects::Clear()
 DrawRects::DrawRects(const char* textureName, int width, int height, const glm::mat4& projection):
 	m_tex(textureName), m_shader("res/shaders/Rect.vs.glsl", "res/shaders/Rect.fs.glsl"), pixelWidth(width), pixelHeight(height),m_projection(projection)
 {
-	float vertices[] = {
-		-0.5f,-0.5f,0.0f, 0.0f,0.0f,
-		 0.5f, 0.5f,0.0f, 1.0f,1.0f,
-		 0.5f,-0.5f,0.0f, 1.0f,0.0f,
-		-0.5f,-0.5f,0.0f, 0.0f,0.0f,
-		 0.5f, 0.5f,0.0f, 1.0f,1.0f,
-		-0.5f, 0.5f,0.0f, 0.0f,1.0f
-	};
-
 	unsigned int VBO;
 	glGenVertexArrays(1, &m_VAO);
 	glGenBuffers(1, &VBO);

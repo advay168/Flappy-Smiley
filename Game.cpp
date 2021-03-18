@@ -1,7 +1,16 @@
 #include "Game.h"
 
+#ifdef _MSC_VER
+#pragma warning(push)
+#pragma warning(disable: 4505)
+#pragma warning(disable: 4701)
+#pragma warning(disable: 4267)
+#endif
 #define GLT_IMPLEMENTATION
 #include "GLtext.h"
+#ifdef _MSC_VER
+#pragma warning(pop)
+#endif
 
 Game::Game(float& WIDTH, float& HEIGHT) :
 	mode(GameState::Welcome),
@@ -142,7 +151,7 @@ void Game::draw()
 	}
 }
 
-void Game::framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void Game::framebuffer_size_callback(GLFWwindow* /* window */, int width, int height)
 {
 	glViewport(0, 0, width, height);
 	WIDTH = width;

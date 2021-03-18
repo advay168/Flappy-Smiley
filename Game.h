@@ -28,8 +28,8 @@ public:
 	void draw();
 
 	void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-	void mouse_callback(GLFWwindow* window, double xpos, double ypos) {}
-	void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {}
+	void mouse_callback(GLFWwindow* /* window */, double /* xpos */, double /* ypos */) {}
+	void scroll_callback(GLFWwindow* /* window */, double /* xoffset */, double /* yoffset */) {}
 	bool reset = false;
 private:
 	int score = 0;
