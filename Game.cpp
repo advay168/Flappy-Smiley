@@ -43,7 +43,7 @@ void Game::processInput(GLFWwindow* window, float dt)
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 	static bool wireframe = false;
-	#ifdef MSVC
+	#ifdef _MSC_VER
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 		__debugbreak();
 	#endif
