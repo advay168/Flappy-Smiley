@@ -53,6 +53,5 @@ jobs:
     - name: Upload binary
       uses: actions/upload-artifact@v2
       with:
-          working-directory: ${{github.workspace}}/build
           name: Upload binary
-          path: Flappy_Smiley
+          path: ${{github.workspace}}/build/Flappy_Smiley
