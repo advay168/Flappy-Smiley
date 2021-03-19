@@ -53,11 +53,15 @@ jobs:
       with:
           name: Ubuntu binary
           path: ${{github.workspace}}/build/Flappy_Smiley
+    - name: create res folder
+      shell: bash
+      working-directory: ${{github.workspace}}
+      run: mkdir ress && cp res ress/res
     - name: Upload res
       uses: actions/upload-artifact@v2
       with:
           name: Ubuntu binary
-          path: ${{github.workspace}}/res
+          path: ${{github.workspace}}/ress
   build_macOS:
     # The CMake configure and build commands are platform agnostic and should work equally
     # well on Windows or Mac.  You can convert this to a matrix build if you need
@@ -102,11 +106,15 @@ jobs:
       with:
           name: MacOS binary
           path: ${{github.workspace}}/build/Flappy_Smiley
+    - name: create res folder
+      shell: bash
+      working-directory: ${{github.workspace}}
+      run: mkdir ress && cp res ress/res
     - name: Upload res
       uses: actions/upload-artifact@v2
       with:
           name: MacOS binary
-          path: ${{github.workspace}}/res
+          path: ${{github.workspace}}/ress
   build_windows:
     # The CMake configure and build commands are platform agnostic and should work equally
     # well on Windows or Mac.  You can convert this to a matrix build if you need
@@ -150,8 +158,12 @@ jobs:
       with:
           name: Windows binary
           path: ${{github.workspace}}/build/Debug/Flappy_Smiley.exe
+    - name: create res folder
+      shell: bash
+      working-directory: ${{github.workspace}}
+      run: mkdir ress && cp res ress/res
     - name: Upload res
       uses: actions/upload-artifact@v2
       with:
           name: Windows binary
-          path: ${{github.workspace}}/res
+          path: ${{github.workspace}}/ress
