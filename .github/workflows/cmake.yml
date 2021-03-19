@@ -56,7 +56,7 @@ jobs:
     - name: create res folder
       shell: bash
       working-directory: ${{github.workspace}}
-      run: mkdir ress && cp res ress/res
+      run: mkdir ress && cp -r res ress/res
     - name: Upload res
       uses: actions/upload-artifact@v2
       with:
@@ -109,7 +109,7 @@ jobs:
     - name: create res folder
       shell: bash
       working-directory: ${{github.workspace}}
-      run: mkdir ress && cp res ress/res
+      run: mkdir ress && cp -r res ress/res
     - name: Upload res
       uses: actions/upload-artifact@v2
       with:
@@ -161,7 +161,7 @@ jobs:
     - name: create res folder
       shell: bash
       working-directory: ${{github.workspace}}
-      run: mkdir ress && cp res ress/res
+      run: mkdir ress && cp -r res ress/res
     - name: Upload res
       uses: actions/upload-artifact@v2
       with:
