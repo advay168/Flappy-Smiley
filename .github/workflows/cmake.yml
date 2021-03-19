@@ -139,4 +139,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: Windows binary
-          path: ${{github.workspace}}/build/Debud/Flappy_Smiley.exe
+          path: ${{github.workspace}}/build/Debug/Flappy_Smiley.exe
