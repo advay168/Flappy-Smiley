@@ -1,5 +1,6 @@
 cmake_minimum_required( VERSION 3.1 )
 set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.19" CACHE STRING "Minimum OS X deployment version" FORCE)
 project( Flappy_Smiley )
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
