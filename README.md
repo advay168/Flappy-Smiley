@@ -1,5 +1,6 @@
 # Flappy-Smiley
 Flappy Bird clone using c++ and opengl
+![Flappy-Smiley_screenshot](https://user-images.githubusercontent.com/23453652/125386576-22ab3580-e3ba-11eb-808c-87c7ac5a24b0.png)
 
 ### Libraries used:
  * [GLFW](https://glfw.org/)
@@ -11,7 +12,7 @@ Flappy Bird clone using c++ and opengl
 ## Getting Started
 
 ### Requirements:
-Cmake
+[Cmake](https://cmake.org/)
 <br>
 c++ compiler
 
@@ -26,5 +27,5 @@ c++ compiler
  mkdir build
  cd build
  cmake ..
- cmake -build .
+ cmake --build .
  ```
